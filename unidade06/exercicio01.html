@@ -4,9 +4,27 @@
         <meta charset="UTF-8">
         <title>Curso jQuery Fundamental</title>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="jquery-3.5.1.min.js"></script>
         <script>
-					
+                $(function () {
+                    $('#cursohtml').click( function () {
+                        alert("Clicou no botão HTML")
+                    })
+
+                    function mostrarMensagem() {
+                        alert("Passou o mouse por cima do botão CSS");
+                        /*Mata o evento*/
+                        $('#cursocss').off("mouseover", mostrarMensagem)
+                    }
+
+                    function mostrarMensagem2() {
+                        alert("Clicou no botão CSS")   
+                    }
+
+                    $('#cursocss').on("mouseover", mostrarMensagem)
+                    $('#cursocss').on("click", mostrarMensagem2)
+                    
+                })
 		</script>        
     </head>
 
