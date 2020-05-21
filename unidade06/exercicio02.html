@@ -7,9 +7,21 @@
 			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
 		</style>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="jquery-3.5.1.min.js"></script>
         <script>
-			
+			$(function(e) {
+                $('#janela').hide();
+
+                $('#mostrar').click( mostrarElemento );
+                $('#esconder').click( esconderElemento ); 
+            })
+
+            function mostrarElemento(e) {
+                $('#janela').show();
+            };
+            function esconderElemento(e) {
+                $('#janela').hide();
+            };
 		</script>        
     </head>
 
